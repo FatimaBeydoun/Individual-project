@@ -49,17 +49,22 @@ menu_data = [
 
 baby_blue_color = 'rgb(137, 207, 240)'
 
-selected_menu = hc.nav_bar(
-    menu_definition=menu_data,
-    override_theme={
-        'txc_inactive': 'white',
-        'menu_background': baby_blue_color,
-        'option_active': 'white'
-    },
-    hide_streamlit_markers=True,
-    sticky_nav=True,
-    sticky_mode='sticky'
-)
+# Create buttons for each tab
+selected_menu = st.sidebar.empty()
+for item in menu_data:
+    button = selected_menu.button(item['label'], key=item['label'])
+    
+#selected_menu = hc.nav_bar(
+   # menu_definition=menu_data,
+    #override_theme={
+       # 'txc_inactive': 'white',
+       # 'menu_background': baby_blue_color,
+       # 'option_active': 'white'
+   # },
+    #hide_streamlit_markers=True,
+    #sticky_nav=True,
+    #sticky_mode='sticky'
+#)
 
 # Page 1: Introduction
 if selected_menu == "Introduction":
@@ -285,11 +290,6 @@ if selected_menu == "Recommendations":
     for recommendation in recommendations:
         st.markdown(f"- {recommendation}")
   
-
-
-
-
-   
 
 
 
