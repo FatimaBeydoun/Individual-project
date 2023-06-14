@@ -65,7 +65,7 @@ selected_menu = hc.nav_bar(
 if selected_menu == "Introduction":
     st.title('The Final beat: Charting the Path of Cardiovascular Death Rates Across the Globe')
     st.write("Welcome to the Cardiovascular Disease Analysis App! This app aims to provide insights into the prevalence and impact of cardiovascular diseases worldwide.")
-    st.image('/Users/user/Desktop/Types_of_heart_diseases.jpg', use_column_width=True)
+    st.image('Types_of_heart_diseases.jpg', use_column_width=True)
     
     st.header("Understanding Cardiovascular Diseases")
     st.write("Cardiovascular diseases (CVDs) encompass a range of conditions that affect the heart and blood vessels. These conditions include hypertension (high blood pressure), coronary heart disease (heart attack), cerebrovascular disease (stroke), heart failure, and other heart-related ailments.")
